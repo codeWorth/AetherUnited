@@ -31,7 +31,7 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="team.html">Team</a></li>
-								<li><a href="https://www.slideshare.net/JustinZheng8/aether-united-pitch-deck">Slidedeck<a></li>
+								<li><a href="https://www.slideshare.net/JustinZheng8/aether-united-pitch-deck">Slidedeck</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -42,7 +42,7 @@
 						<div class="inner">
 							<div class="logo"><img itemprop="image" src="logo.png" class="icon"/></div>
 							<img src="name.png" class="title"/>
-							<p itemprop="applicationCategory" class="subname">Crowdpowered esports team.</p>
+							<p itemprop="applicationCategory" class="subname">the People's Republic of Esports</p>
 						</div>
 					</section>
 
@@ -54,17 +54,16 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="Interview.jpg" alt=""/></a>
 									<div class="content">
-										<h2 class="major">Who We Are - What We Believe In</h2>
+										<h2 class="major">Intro to Aether United</h2>
 
 										<p> 
-											<span itemprop="name">Aether United</span> is a revolutionary kind of esports company. <br>
-											We use <span itemprop="operatingSystem">blockchain</span> to fund ourself and futarchy to let esports fans participate in strategical decisions about the gaming team. <br><br>
+											<span itemprop="name">Aether United</span> is a revolutionary esports brand. <br>
+											By using blockchain technology, we will have unprecedented financial transparency. Additionally, our use of prediction markets allows use to harness the wisdom of the crowd to make more informed decisions.<br><br>
 
 											We believe in the wisdom of the crowd, and we believe that a stronger connection between teams and their fan base is a win-win situation. <br><br>
 											
-											We are the only crowdpowered (i.e. fan-powered) esports organization.  <br>
-											We exist to make our teams great; to make esports great! <br>
-											We are the People's Rebublic of Esports! 
+											As the only crowdpowered esports organization, our main goal is to make our teams great and improve the esports ecosystem. <br> <br>
+
 										<p> 
 									</div>
 								</div>
@@ -78,16 +77,17 @@
 										<h2 class="major">Our Deck</h2> 
 
 										<p>
-											Check out our Slide Deck here. <br>
-											This is constantly updated with our newest developments.
+											Check out our Slide Deck and learn more about this project! <br>
+											
 										</p>
 
 										<a itemprop="downloadUrl" href="https://www.slideshare.net/JustinZheng8/aether-united-pitch-deck" class="special">Our Slidedeck</a>
 									</div>
 								</div>
 								<div id="slideshow">
-									<div id="leftArrow">&gt</div>
-									<div id="rightArrow">&lt</div>
+									<img src="leftarrow.png" class="imageButton" id="leftArrow" onclick="prevImg()" />
+									<img src="rightarrow.png" class="imageButton" id="rightArrow" onclick="nextImg()" />
+									<div id="slideNumber">1</div>
 									<img/>
 								</div>
 								<div style="height:75px"></div>
@@ -170,7 +170,10 @@
 									San Francisco, CA
 								</li>
 								<li><img src="discord.png" class="discord" height="50px"/><div class="discordp"><a href="https://discord.gg/XRdmXBz">Discord Channel</a></div></li>
-								<li class="fa-envelope">aun@aetherunited.com</li>
+								<li class="fa-envelope"><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="afcedac1efcecadbc7cadddac1c6dbcacb81ccc0c2">[email&#160;protected]</a>
+									<script data-cfhash='f9e31' type="text/javascript">
+										/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+								</li>
 								<li class="fa-twitter"><a href="https://twitter.com/aetherunited">Our Twitter</a></li>
 								<li class="fa-facebook"><a href="https://www.facebook.com/aetherunited/">Our Facebook</a></li>
 								<li class="fa-linkedin"><a href="https://www.linkedin.com/company-beta/17967579/?pathWildcard=17967579">Our Linkedin</a></li>
@@ -190,5 +193,52 @@
 			<script src="assets/js/util.js"></script>
 			<!-- [if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif] -->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				var index = 0;
+				var maxIndex = 13;
+				var counter = document.getElementById("slideNumber");
+				var parentSlide = document.getElementById("slideshow");
+				var extension = ".png";
+				var imgs = [];
+
+				function addImg(src, parent) {
+					var img = document.createElement("img");
+					img.src = src;
+					img.style.zIndex = 0;
+					img.className = "showedImage";
+
+					imgs.push(img);
+					parent.appendChild(img);
+				}
+
+				function prevImg() {
+					index--;
+					if (index < 0) {
+						imgs[0].style.zIndex = 0;
+						index = maxIndex;
+					} else {
+						imgs[index+1].style.zIndex = 0;
+					}
+					counter.innerText = index+1;
+					imgs[index].style.zIndex = 5;
+				}
+
+				function nextImg() {
+					index++;
+					if (index > maxIndex) {
+						imgs[maxIndex].style.zIndex = 0;
+						index = 0;
+					} else {
+						imgs[index-1].style.zIndex = 0;
+					}
+					counter.innerText = index+1;
+					imgs[index].style.zIndex = 5;
+				}
+
+				for (var i = 0; i < maxIndex + 1; i++) {
+					addImg("slideshow/" + i + extension, parentSlide);
+				}
+				imgs[0].style.zIndex = 5;
+			</script>
 	</body>
 </html>
