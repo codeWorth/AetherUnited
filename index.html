@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html>
@@ -236,17 +237,14 @@
 				var parentSlide = document.getElementById("slideshow");
 				var extension = ".png";
 				var imgs = [];
-
 				function addImg(src, parent) {
 					var img = document.createElement("img");
 					img.src = src;
 					img.style.zIndex = 0;
 					img.className = "showedImage";
-
 					imgs.push(img);
 					parent.appendChild(img);
 				}
-
 				function prevImg() {
 					index--;
 					if (index < 0) {
@@ -258,7 +256,6 @@
 					counter.innerText = index+1;
 					imgs[index].style.zIndex = 5;
 				}
-
 				function nextImg() {
 					index++;
 					if (index > maxIndex) {
@@ -270,7 +267,6 @@
 					counter.innerText = index+1;
 					imgs[index].style.zIndex = 5;
 				}
-
 				for (var i = 0; i < maxIndex + 1; i++) {
 					addImg("slideshow/" + i + extension, parentSlide);
 				}
@@ -281,69 +277,50 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 	//jQuery is required to run this code
 $( document ).ready(function() {
-
     scaleVideoContainer();
-
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
-
     $(window).on('resize', function() {
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
-
 });
-
 function scaleVideoContainer() {
-
     var height = $(window).height() + 5;
     var unitHeight = parseInt(height) + 'px';
     $('.homepage-hero-module').css('height',unitHeight);
-
 }
-
 function initBannerVideoSize(element){
-
     $(element).each(function(){
         $(this).data('height', $(this).height());
         $(this).data('width', $(this).width());
     });
-
     scaleBannerVideoSize(element);
-
 }
-
 function scaleBannerVideoSize(element){
-
     var windowWidth = $(window).width(),
     windowHeight = $(window).height() + 5,
     videoWidth,
     videoHeight;
-
     // console.log(windowHeight);
-
     $(element).each(function(){
         var videoAspectRatio = $(this).data('height')/$(this).data('width');
-
         $(this).width(windowWidth);
-
         if(windowWidth < 1000){
             videoHeight = windowHeight;
             videoWidth = videoHeight / videoAspectRatio;
             $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-
             $(this).width(videoWidth).height(videoHeight);
         }
-
         $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-
     });
 }8
 </script>
-	<script>
+
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -352,9 +329,7 @@ function scaleBannerVideoSize(element){
   ga('create', 'UA-98256759-1', 'auto');
   ga('send', 'pageview');
 
->>>>>>> 7070caccf6cda834d151cc2fa8fa64b881de94fe
 </script>
-		
 		<script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -371,6 +346,5 @@ function scaleBannerVideoSize(element){
   ]
 }
 =======
-
 	</body>
 </html>
