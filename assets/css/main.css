@@ -161,6 +161,7 @@
 		-webkit-text-size-adjust: none;
 	}
 
+      background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("background.jpg");
 /* Box Model */
 
 	*, *:before, *:after {
