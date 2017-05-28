@@ -159,42 +159,21 @@
 				<!--  Footer  -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<form method="post" action="mail.php">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name"/>
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email"/>
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="4"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" id="sendemail"/></li>
-								</ul>
-							</form>
+						
 							<ul class="contact">
 								<li class="fa-home">
 									<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-										<span itemprop="name">Aether United</span> 
+										<span itemprop="name">Aether United Inc.</span> 
 									</span><br/>
 									San Francisco, CA
 								</li>
 								<li><img src="discord.png" class="discord" height="50px"/><div class="discordp"><a href="https://discord.gg/XRdmXBz">Discord Channel</a></div></li>
-								<li class="fa-envelope"><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="afcedac1efcecadbc7cadddac1c6dbcacb81ccc0c2">[email&#160;protected]</a>
-									<script data-cfhash='f9e31' type="text/javascript">
-										/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
-								</li>
 								<li class="fa-twitter"><a href="https://twitter.com/aetherunited">Our Twitter</a></li>
 								<li class="fa-facebook"><a href="https://www.facebook.com/aetherunited/">Our Facebook</a></li>
 								<li class="fa-linkedin"><a href="https://www.linkedin.com/company-beta/17967579/?pathWildcard=17967579">Our Linkedin</a></li>
 							</ul>
 							<ul class="copyright">
-								<span itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name">Aether United.</li></span><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<span itemprop="author" itemscope itemtype="http://schema.org/Person"><li itemprop="name">Aether United Inc.</li></span><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
@@ -264,55 +243,10 @@
 		
 		
 			</script>
-<<<<<<< HEAD
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-	//jQuery is required to run this code
-$( document ).ready(function() {
-    scaleVideoContainer();
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-    $(window).on('resize', function() {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-});
-function scaleVideoContainer() {
-    var height = $(window).height() + 5;
-    var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height',unitHeight);
-}
-function initBannerVideoSize(element){
-    $(element).each(function(){
-        $(this).data('height', $(this).height());
-        $(this).data('width', $(this).width());
-    });
-    scaleBannerVideoSize(element);
-}
-function scaleBannerVideoSize(element){
-    var windowWidth = $(window).width(),
-    windowHeight = $(window).height() + 5,
-    videoWidth,
-    videoHeight;
-    // console.log(windowHeight);
-    $(element).each(function(){
-        var videoAspectRatio = $(this).data('height')/$(this).data('width');
-        $(this).width(windowWidth);
-        if(windowWidth < 1000){
-            videoHeight = windowHeight;
-            videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-            $(this).width(videoWidth).height(videoHeight);
-        }
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-    });
-}8
-</script>
+	
 
 <script>
-=======
+
 	<script>
 >>>>>>> 2b538922b5052049010f3c529054ab41cab68c76
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -324,7 +258,6 @@ function scaleBannerVideoSize(element){
   ga('send', 'pageview');
 
 </script>
-<<<<<<< HEAD
 		<script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -341,7 +274,6 @@ function scaleBannerVideoSize(element){
   ]
 }
 
-=======
->>>>>>> 2b538922b5052049010f3c529054ab41cab68c76
+
 	</body>
 </html>
